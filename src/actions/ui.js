@@ -11,3 +11,4 @@ export const uiOpenModal = () => ({
 export const uiCloseModal = () => ({
     type: types.uiCloseModal
 })
+

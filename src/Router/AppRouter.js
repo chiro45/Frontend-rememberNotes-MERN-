@@ -3,15 +3,16 @@ import { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { Routes, Route, BrowserRouter } from "react-router-dom";
 import { startChecking } from '../actions/auth';
-
+import {PublicRoute} from './PublicRoutes'
+import {PrivateRoute} from './PrivateRoutes'
 import { LoginScreen } from '../Componentes/Auth/LoginScreen';
 import { CalendarScreen } from '../Componentes/calendar/CalendarScreen';
 import { NothingHere } from '../Componentes/Error/NothingHere';
-import { PrivateRoutes } from './PrivateRoutes';
-import { PublicRoutes } from './PublicRoutes';
+
+
 export const AppRouter = () => {
   const dispatch = useDispatch()
-  const {cheking, uid} = useSelector( state => state.authReducer )
+  const {cheking} = useSelector( state => state.authReducer )
   useEffect(() => {
     dispatch(startChecking())
     
@@ -24,19 +25,22 @@ export const AppRouter = () => {
   return (
     <BrowserRouter>
     <Routes>
-        
-        <PublicRoutes 
-        exact 
-        path='/login' 
-        component={<LoginScreen/>} 
-        isAuthenticated={!!uid}
-        />
+    <Route path="/login" element={
+                    <PublicRoute>
+                        <LoginScreen />
+                    </PublicRoute>
+                } 
+                />
+          
+          <Route path="/*"  element ={
+                  <PrivateRoute>
+                       <CalendarScreen/>
+                  </PrivateRoute>
+              }
+          />
+       
 
-        <PrivateRoutes  
-        exact 
-        path='/' 
-        component={<CalendarScreen/>}
-         isAuthenticated={!!uid}/>
+  
         <Route
             path="*"
             element={<NothingHere/>}

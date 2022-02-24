@@ -1,3 +1,5 @@
+//archivo de traduccion para el componente
+
 export const messages = {
     allDay: 'Todo el día',
     previous: '< Anterior ',

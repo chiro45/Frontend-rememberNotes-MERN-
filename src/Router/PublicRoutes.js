@@ -1,25 +1,14 @@
-import React from 'react';
-
-
-import { Routes, Navigate } from 'react-router-dom';
-
-
-export const PublicRoutes = ({
-    isAuthenticated,
-    component: Component,
-    ...rest
-}) => {
-
-    return (
-        <Routes { ...rest }
-            component={ (props) => (
-                ( isAuthenticated )
-                    ? ( <Navigate to ='/'/>)
-                    : ( <Component { ...props } /> )
-            )}
+import { useSelector } from 'react-redux';
+import { Navigate } from 'react-router-dom';
+ 
+export const PublicRoute = ({children}) => {
+    const {uid} = useSelector(state => state.authReducer)
+  
+    return ( !!uid
+        ? <Navigate to="/" />
+        : children 
         
-        />
-    )
+        )
+        
 }
-
-
+ 

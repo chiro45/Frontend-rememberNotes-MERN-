@@ -11,7 +11,7 @@ import DateTimePicker from 'react-datetime-picker';
 import Swal from 'sweetalert2';
 import { useDispatch, useSelector } from 'react-redux';
 import { uiCloseModal } from '../../actions/ui';
-import { addNew, clearActiveNote, eventUpdate } from '../../actions/events';
+import {  clearActiveNote,  startAddNew, startEventUpdated } from '../../actions/events';
 // Make sure to bind modal to your appElement (https://reactcommunity.org/react-modal/accessibility/)
 Modal.setAppElement('#root');
 
@@ -91,16 +91,10 @@ export const CalendarModal = () => {
         
       }else{
         if(activeEvent){
-          dispatch(eventUpdate(formValues))
+          dispatch(startEventUpdated( formValues) )
         }else{
-          dispatch(addNew({
-            ...formValues,
-            id: new Date().getTime(),
-            user: {
-              _id: '123',
-              name:'Luciano'
-            }
-          }))
+          dispatch(startAddNew( formValues) )
+          
         }
       Swal.fire("Listo",'La nota ha sido guardada', 'success')
        closeModal();

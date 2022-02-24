@@ -11,22 +11,26 @@ export const startLogin = (email, passwd)=>{
       
       
       if(body.ok){
-        localStorage.setItem('token',body.token )
-        localStorage.setItem('token-init-date', new Date().getTime() )
-        dispatch(login({
-            uid: body.uid,
+          localStorage.setItem('token',body.token )
+          localStorage.setItem('token-init-date', new Date().getTime() )
+          dispatch(login({
+              uid: body.uid,
             name: body.name
         }))
     }else{
         Swal.fire('Error', body.msg,'error')
     }
-
-      
-
-    }
+    
+    
+    
+}
 } 
 
 
+const login = (user)=>({
+    type: types.authlogin,
+    payload: user
+})
 export const startRegister = (name,email, passwd)=>{
     return async(dispatch)=>{
         const resp = await fetchSinToken('auth/register',{name, email, passwd}, 'POST')
@@ -70,9 +74,14 @@ export const startChecking = ()=>{
 const chekingFinish = ()=>({
     type: types.authChekingFinish
 })
+export const startLogout = ()=>{
+    return(dispatch)=>{
+        localStorage.clear();
+        dispatch(logout())
+    }
+}
 
-
-const login = (user)=>({
-    type: types.authlogin,
-    payload: user
+const logout = ()=>({
+    type: types.authLogout
+   
 })

@@ -1,29 +1,17 @@
-
-
-import { Navigate, Routes } from "react-router-dom"
-
-
-
-
-//rutas que se pueden acceder ya una vez que el usuario ha sido logueado
-
-export const PrivateRoutes = ({
-    isAuthenticated,
-    component: Component,
-    ...rest
-}) => {
+import React from 'react';
+import { Navigate } from 'react-router-dom';
+import { useSelector } from 'react-redux';
+ 
+ 
+ 
+export const PrivateRoute = ({children}) => {
     
-return(
-    <Routes{...rest}
-    component={(props)=>(
-        (isAuthenticated)
-        ?(<Component {...props}/>)
-        :(<Navigate to ='auth/login'/>)
-    )}
-
-    />
-   
-
-)
+const {uid} = useSelector(state => state.authReducer)
+    return (
+        (!!uid)
+        ?   children  
+        :  <Navigate to="/login" />
+    )              
 }
-
+ 
+ 
