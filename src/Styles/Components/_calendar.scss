@@ -22,6 +22,17 @@
     min-height: 890px;
     color: rgba(63, 81, 246, 0.911);
 }
+.rbc-day-slot .rbc-events-container{
+    margin-right: 0rem;
+}
+
+
+.rbc-event-content div {
+    width: 100%;
+}
+
+
+
 .fabs{
     background-color: rgb(63, 81, 246);
     color: #fff;
@@ -66,3 +77,25 @@
     }
 }
     
+
+
+
+@media screen and (max-width: 568px) {
+    .rbc-event-content div strong {  
+        font-size: .7rem !important;
+    }
+    .fabs{
+        height: 40px;
+        width: 40px;
+        font-size: 1.4rem;
+        padding: 0rem;
+        right: 4rem;
+   
+    
+    }
+    .delete{
+        font-size: 1.4rem;
+        transform: translate(1rem,-5rem);
+    }
+    
+}

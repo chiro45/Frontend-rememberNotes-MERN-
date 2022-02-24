@@ -178,10 +178,8 @@ $bacgroundWhite: #fff;
 
 @media screen and (max-width: 1050px) {
     .login__register__container,
-    .login__login__container{
-        
+    .login__login__container{ 
         width: 300px;
-       
     }
     
     
@@ -196,6 +194,9 @@ $bacgroundWhite: #fff;
     .flex-container{
         flex-direction: column;
         height: 400px;
+    }
+    .login__container{
+       min-height: 800px;
     }
 
 }
@@ -223,7 +224,6 @@ $bacgroundWhite: #fff;
 
 @media screen and (max-width: 340px) {
     .container-title{
-        
         width: 235px;
        
     }
