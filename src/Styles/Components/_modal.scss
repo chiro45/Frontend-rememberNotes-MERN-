@@ -1,0 +1,149 @@
+/* REACT MODAL */
+$azulPrincipal : #1e57c2;
+.ReactModalPortal > div{
+    opacity: 0;
+}
+
+.ReactModalPortal .ReactModal__Overlay {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    transition: opacity .2s ease-in-out;
+    z-index: 999;
+}
+
+.modal-fondo {
+    background-color: rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur(4px);
+    bottom: 0;
+    left: 0;
+    right: 0;
+    top: 0;
+    position: fixed;
+}
+
+.ReactModalPortal .ReactModal__Overlay--after-open {
+    opacity: 1;
+}
+
+.ReactModalPortal .ReactModal__Overlay--before-close {
+    opacity: 0;
+}
+
+.modal{
+    background: $azulPrincipal;
+    border-radius: .4rem;
+    color: #fff;
+    display: inline;
+    max-height: 720px;
+    max-width: 500px;
+    outline: none;
+    padding: 10px;
+}
+.ReactModal__Content{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.button-modal{
+    color: $azulPrincipal ;
+    background-color: #fff;
+    border: none;
+    padding: .4rem;
+    border-radius: .4rem;
+    font-size: 1rem;
+    &:hover{   
+    cursor: pointer;
+    
+    background-color:darken($color: #fff, $amount: 15);
+    transition: ease .3s;
+    }
+}
+
+
+//FORM
+
+
+.form-Container{
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    padding: 2rem;
+}
+.modal__input{
+    width: 400px;
+    background-color: #fff;   
+    padding: .4rem;
+   
+}
+.react-datetime-picker__inputGroup__divider{
+    color: #000;
+}
+.modal__input1{
+    width: 400px;
+    background-color: #fff; 
+    padding: .4rem;
+    font-size: 1.2rem; 
+   
+}
+.react-datetime-picker{
+    width: 400px;
+}
+.react-datetime-picker__wrapper{
+    border: none;
+}
+
+ 
+
+.modal__label-input{
+ margin-top: 1rem;
+ margin-bottom: .4rem;
+}
+
+.modal__input1::placeholder,
+.text-area::placeholder{
+    padding: .3rem;
+    font-size: 1.2rem;
+    
+}
+.text-area{
+    resize: none;
+    flex: 1 1 auto;
+    height: 200px;
+    
+}
+.modal__input,
+.modal__input1,
+.text-area{
+    border-radius: .4rem;
+    border: none;
+    outline: none;
+}
+
+@media screen and (max-width: 540px) {
+    .form-Container{
+        
+        padding: .3rem;
+    }
+    .modal__input1, .text-area{
+        width: 270px;
+        font-size: 1rem;
+        padding: .3rem;
+        
+    }
+    .react-datetime-picker__wrapper{
+        display: inline;
+        width: 267px;
+        
+    }
+    .react-datetime-picker{
+        
+       width: 270px;
+        
+    }
+    .react-datetime-picker__inputGroup{
+        display: flex;
+        
+        
+    }
+    }

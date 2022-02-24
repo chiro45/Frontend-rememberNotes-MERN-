@@ -1,0 +1,33 @@
+$bakcgroundNavBar: #2F353A;
+.navbar__container{
+    display: flex;
+    justify-content: space-between;
+    padding: .4rem;
+    background-color: $bakcgroundNavBar;
+    align-items: center;
+}
+
+
+.navbar-logout{
+    color: #e02f2f;
+    background-color:$bakcgroundNavBar;     
+    border: 1px solid #e02f2f;
+    padding: .3rem;
+    border-radius: .4rem;
+    margin-right: 1rem;
+    transition: background-color .3s ease ;
+    transition: color .3s ease ;
+
+        &:hover{
+            cursor: pointer;
+            color: #fff;
+            background-color:#e02f2f;   
+        }
+    
+}
+
+.navbar-name{
+    padding: .3rem;
+    color: #fff;
+
+}

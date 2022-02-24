@@ -1,0 +1,68 @@
+.calendar-screen{
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    margin: 0px;
+    padding: 0px;
+}
+
+.rbc-calendar, .rbc-time-view{
+    
+    max-height: 920px;
+ 
+    color: rgba(63, 81, 246, 0.911);
+}
+.rbc-agenda-view{
+    min-height: 887px;
+    max-height: 908px;
+ 
+    color: rgba(63, 81, 246, 0.911);
+}
+.rbc-month-view{
+    min-height: 890px;
+    color: rgba(63, 81, 246, 0.911);
+}
+.fabs{
+    background-color: rgb(63, 81, 246);
+    color: #fff;
+    border: none;
+    border-radius: 100%;
+    height: 70px;
+    width: 70px;
+    bottom: 1.6rem;
+    font-size: 2rem;
+    padding: 1rem;
+    position: fixed;
+    right: 4rem;
+    transform: translate(1rem,-2rem);
+    z-index: 100;
+    &:hover{
+        cursor: pointer;
+        background-color: lighten($color: rgb(63, 81, 246), $amount: 6);
+    }
+}
+.delete{
+    background-color: rgb(204, 20, 20);
+    transform: translate(1rem,-7rem);
+    
+    &:hover{
+        cursor: pointer;
+        background-color: lighten($color: rgb(204, 20, 20), $amount: 6);
+    }
+}
+/*========== SCROLL BAR ==========*/
+::-webkit-scrollbar{
+    width: .8rem;
+    
+    border-radius: .3rem;
+    
+    
+}
+::-webkit-scrollbar-thumb{
+    background-color: darken($color: rgb(63, 164, 246), $amount: 10);
+    border-radius: .5rem;
+    &:hover{
+        background-color: darken($color: rgb(63, 164, 246), $amount: 30);
+    }
+}
+    

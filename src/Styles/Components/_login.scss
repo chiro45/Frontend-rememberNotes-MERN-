@@ -1,0 +1,243 @@
+
+$azulPrincipal : #1e57c2;
+$azulPrincipal2 : #2e4e8a;
+    
+$bacgroundWhite: #fff;
+
+.login__container{
+    background-image: url('../../../public/assets/backgroundLogin.png');
+    display: flex;
+    height: 100vh;
+    width: 100vw;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.flex-container{
+    display: flex;
+    justify-content: center;
+    
+}
+.container-title{
+    height: 30px;
+    box-shadow: 4px 4px 10px rgba($color: #0000, $alpha: 0.5);
+    padding: 2rem;
+    width: 400px;
+    border-radius: .4rem;
+  background: linear-gradient( to top, $azulPrincipal, $azulPrincipal2);
+    
+}
+.titleApp{
+    color: $bacgroundWhite;
+    font-size: 2rem;
+    text-align: center;    
+
+}
+.titleApp i{
+    animation: loading-spinner  4s linear infinite; 
+    color: $bacgroundWhite ; 
+
+}
+@keyframes loading-spinner
+ {
+    0%{
+    transform:rotate(0deg);
+    }
+    100%{
+    transform: rotate(360deg);
+    }
+ }
+
+
+.login__register__container,
+.login__login__container{
+    padding: 3rem;  
+    height: 400px;
+    width: 600px;
+    margin-top: 6rem;
+    box-shadow: 4px 4px 10px rgba($color: #0000, $alpha: 0.5);
+}
+
+
+.login__container-inputsLogin,
+.login__container-inputsRegister{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: .4rem;
+    
+}
+.login__login__container{
+    background-color: $bacgroundWhite;
+    border-radius:.4rem 0  ;
+    
+}
+.login__register__container{
+    background-color: $azulPrincipal;
+    
+    border-radius: 0 .4rem .4rem 0  ;
+}
+
+.login__title__container p {
+    color: gray;
+    font-size: 1.5rem;
+    text-align: center;
+    
+}
+.register__title__container p {
+    color: $bacgroundWhite;
+    font-size: 1.5rem;
+    text-align: center;
+    
+}
+.login__inputs{
+    margin-top: .4rem;
+    font-size: .9rem;
+    background-color: $azulPrincipal;
+    padding: .4rem;
+    border :none;
+    border-bottom: 1px solid $bacgroundWhite;
+
+    &:focus {
+        outline: none;
+    }   
+
+}
+.inputR::placeholder, .inputR{
+    color: $bacgroundWhite;
+    
+}
+.inputR{
+    &:focus{
+        background-color: lighten($color: $azulPrincipal, $amount: 2);
+        
+    }
+}
+.inputs-login{
+    border-bottom: 1px solid #2222 ;
+    background-color: $bacgroundWhite;
+        &:focus{
+            background-color: lighten($color: $azulPrincipal, $amount: 55);
+            border-bottom: 1px solid $azulPrincipal ;
+        }
+}
+.login__containerbutton{
+    margin-top: 2rem ;
+}
+
+.button{
+    padding: .5rem;
+    font-size: 1rem;
+    border-radius: 1rem;
+    border: none;
+    
+    cursor: pointer;
+     width: 150px;
+    &:hover{
+        i{
+           transform: translate(.5rem);  
+            transition:  .3s;
+
+        }      
+}
+}
+
+
+
+.login__button-register{
+    color: $azulPrincipal;
+    background-color: $bacgroundWhite;
+    &:hover{   
+    background-color:darken($color: $bacgroundWhite, $amount: 15);
+    transition: ease .3s;
+    
+}
+}
+.login__button-login{
+    color: $bacgroundWhite;
+    background-color: $azulPrincipal;
+     &:hover{
+         background-color:lighten($color: $azulPrincipal, $amount: 15);
+         transition: ease .3s;
+     }
+}
+
+
+
+@media screen and (max-width: 1480px) {
+    
+    .login__register__container,
+    .login__login__container{
+        
+        width: 400px;
+       
+    }
+    
+    
+}
+
+
+@media screen and (max-width: 1050px) {
+    .login__register__container,
+    .login__login__container{
+        
+        width: 300px;
+       
+    }
+    
+    
+}
+
+
+@media screen and (max-width: 860px) {
+    .container-title{
+        margin-top: -16rem;
+        margin-bottom: 8rem;
+    }
+    .flex-container{
+        flex-direction: column;
+        height: 400px;
+    }
+
+}
+@media screen and (max-width: 560px) {
+    .container-title{
+        margin-top: -7rem;
+        margin-bottom: 8rem;
+        width: 285px;
+        height: 30px;
+    }
+    .titleApp{
+        font-size: 1.4rem;
+    }
+    .flex-container{
+        flex-direction: column;
+        
+    }
+    .login__register__container,
+    .login__login__container{
+    width: 250px;
+    margin-top: 1rem;
+}
+    
+}
+
+@media screen and (max-width: 340px) {
+    .container-title{
+        
+        width: 235px;
+       
+    }
+    .titleApp{
+        font-size: 1.3rem;
+    }
+    .flex-container{
+        flex-direction: column;
+        
+    }
+    .login__register__container,
+    .login__login__container{
+    width: 200px;
+    margin-top: 1rem;
+}
+        
+    }
