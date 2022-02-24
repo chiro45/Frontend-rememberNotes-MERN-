@@ -7,14 +7,14 @@ import { useForm } from '../../hooks/useForm'
 export const LoginScreen = () => {
   const dispatch = useDispatch()
   const [formLoginvalues, handleLoginInputChange] = useForm({
-    lEmail:'luciano.chiroli45@gmail.com',
-    lPasswd: '123456789'
+    lEmail:'',
+    lPasswd: ''
   })
   const [formRegistervalues, handleRegisterInputChange] = useForm({
-    name:'Luciano',
-    rEmail:'luciano.chiro45@gmail.com',
-    rPasswd: '123456789',
-    rPasswd2: '123456789'
+    name:'',
+    rEmail:'',
+    rPasswd: '',
+    rPasswd2: ''
   })
 
   const { lEmail, lPasswd} = formLoginvalues ;
