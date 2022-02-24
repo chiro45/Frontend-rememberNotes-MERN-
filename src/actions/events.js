@@ -125,3 +125,8 @@ const eventUpdated = (evento) =>({
     type: types.eventUpdate,
     payload: evento
 })
+
+
+export const eventLogout  = ()=>({
+    type: types.eventLogout
+})
