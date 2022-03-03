@@ -13,7 +13,9 @@ import { useDispatch, useSelector } from 'react-redux';
 import { uiCloseModal } from '../../actions/ui';
 import {  clearActiveNote,  startAddNew, startEventUpdated } from '../../actions/events';
 // Make sure to bind modal to your appElement (https://reactcommunity.org/react-modal/accessibility/)
-Modal.setAppElement('#root');
+if(process.env.NODE_ENV !== 'test'){
+  Modal.setAppElement('#root');
+}
 
 const startDate = moment().minutes(0).seconds(0).add(1,'hour');
 const endDate = startDate.add(1, 'hour')

@@ -1,0 +1,133 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`test in <LoginScreen/> should be seen correctly 1`] = `
+<div
+  className="login__container"
+>
+  <div
+    className="container-title"
+  >
+    <h1
+      className="titleApp"
+    >
+      <i
+        className="fa-solid fa-book"
+      />
+       RememberNotes 
+      <i
+        className="fa-solid fa-book"
+      />
+    </h1>
+  </div>
+  <div
+    className="flex-container"
+  >
+    <form
+      className="login__login__container"
+      onSubmit={[Function]}
+    >
+      <div
+        className="login__title__container"
+      >
+        <p>
+          Ingresar 
+        </p>
+      </div>
+      <div
+        className="login__container-inputsLogin"
+      >
+        <input
+          className="login__inputs inputs-login"
+          name="lEmail"
+          onChange={[Function]}
+          placeholder="Email"
+          type="email"
+          value=""
+        />
+        <input
+          className="login__inputs inputs-login"
+          name="lPasswd"
+          onChange={[Function]}
+          placeholder="Contraseña"
+          type="password"
+          value=""
+        />
+      </div>
+      <div
+        className="login__containerbutton"
+      >
+        <button
+          className="login__button-login button"
+          type="submit"
+        >
+          Ingresar 
+          <i
+            className="fa-solid fa-arrow-right"
+          />
+        </button>
+      </div>
+    </form>
+    <form
+      className="login__register__container"
+      onSubmit={[Function]}
+    >
+      <div
+        className="register__title__container"
+      >
+        <p>
+          Registrarse
+        </p>
+      </div>
+      <div
+        className="login__container-inputsRegister"
+      >
+        <input
+          className="login__inputs inputR"
+          name="name"
+          onChange={[Function]}
+          placeholder="Nombre"
+          type="text"
+          value=""
+        />
+        <input
+          className="login__inputs inputR"
+          name="rEmail"
+          onChange={[Function]}
+          placeholder="Email"
+          type="email"
+          value=""
+        />
+        <input
+          className="login__inputs inputR"
+          name="rPasswd"
+          onChange={[Function]}
+          placeholder="Contraseña"
+          type="text"
+          value=""
+        />
+        <input
+          className="login__inputs inputR"
+          name="rPasswd2"
+          onChange={[Function]}
+          placeholder="Repita la contraseña"
+          type="text"
+          value=""
+        />
+      </div>
+      <div
+        className="login__containerbutton"
+      >
+        <button
+          className="login__button-register button"
+          type="submit"
+        >
+          Registrarse 
+          <i
+            className="fa-solid fa-arrow-right-to-bracket"
+          />
+        </button>
+      </div>
+    </form>
+  </div>
+</div>
+`;
